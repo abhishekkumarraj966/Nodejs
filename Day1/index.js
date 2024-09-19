@@ -6,7 +6,16 @@
 // console.log(text);
 // console.log(text2);
 
-require("./Batman.js");
-require("./Superman.js");
+// require("./Batman.js");
+// require("./Superman.js");
+
+
+const superHero = require("./super-hero");
+console.log(superHero.getName());
+superHero.setName("Superman");
+console.log(superHero.getName());
+
+const NewSuperHero = require("./super-hero");
+console.log(NewSuperHero.getName());
 
 
