@@ -38,7 +38,7 @@ app.use(function (req, res, next) {
 //   res.send("about pg hai 1");
 // });
 app.get("/profile", function (req, res) {
- return next(new Error("Something went wrong"));
+ return next(new Error("Something went wrong")); 
  
 });
 
