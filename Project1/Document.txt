@@ -1,0 +1,36 @@
+Dynamic Routing 👍
+ 
+	 hum log kai bar kuchh routes dekhete hai unmein sirf ek hi hissa chang hota hai 
+	 /author/harsh
+	 /author/harshita
+	 /author/harshika
+
+	Dynamic routing
+
+	How to get data coming from frontend and backend route
+
+Setting uo parsers for form ::
+
+
+Setting up ejs for ejs Pages
+
+	install ejs from npm 
+	setup ejs as a  view engine 
+Setting up public static files
+
+
+# day 2 and video 5
+
+form handling and working with the forms
+
+ handle backend process of form and making sure 
+ the data coming from any frontend lib, fw , templating engines 
+ we still handle it at the backend process 
+
+ ** session - Cookie
+
+hum log kuch bhi data frontend par browser par rakh skte hai and jab 
+bhi aap kuch bhi request backend par karoge wo frontend  pe  saved data 
+automatically backend par chala jaayeg
+
+
