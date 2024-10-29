@@ -31,12 +31,38 @@ app.get("/file/:filename", function (req, res) {
   })
 });
 
+// Edit a file name 
+app.get("/edit/:filename", function (req, res) {
+  res.render('edit', {filename:req.params.filename});
+});
+
+
+// post Edit 
+app.post("/edit", function (req, res) {
+fs.rename(`./files/${req.body.previous}`, `./files/${req.body.new}`, function(err){
+  res.redirect("/");
+})
+});
+
+
 // create kr ke post kr  reha hai  home page pe 
 app.post("/create", function (req, res) {
- fs.writeFile(`./files/${req.body.title.split(' ').join('')}.txt`, req.body.details, function(err){
-res.redirect("/")
- })
+  // Check if title exists in the request body
+  if (req.body.title) {
+    const title = req.body.title.split(' ').join('');
+    fs.writeFile(`./files/${title}.txt`, req.body.details || '', function (err) {
+      if (err) {
+        console.error("Error writing file:", err);
+        return res.status(500).send("Error creating file.");
+      }
+      res.redirect("/");
+    });
+  } else {
+    console.error("Title is missing in the request body.");
+    res.status(400).send("Title is required.");
+  }
 });
+
 
 // Start the server
 app.listen(port, () => {

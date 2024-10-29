@@ -18,6 +18,7 @@
                 <textarea class="block px-5 py-2 resize-none bg-zinc-800 w-full mt-5 rounded-md outline-none"
                     name="details" id="" placeholder="Write your task details" required></textarea>
                 <input type="submit" class="p-2 mt-3 w-[130px] rounded-md bg-blue-600" value="Create Task">
+
             </form>
         </div>
 
@@ -31,7 +32,11 @@
                         <h1 class="text-start font-bold text-[25px] text-red-500 tracking-tighter">
                             <%= val %>
                         </h1>
-                        <a href="/file/<%= val %>" class="text-blue-500 inline-block mt-3">Read More</a>
+                        <div class="flex w-full items-center  justify-between mt-4">
+                            <a href="/file/<%= val %>" class="text-blue-500 inline-block ">Read More</a>
+
+                            <a href="/edit/<%=val%>" class=" text-zinc-600 ">Edit filename</a>
+                        </div>
                     </div>
                     <% }); %>
                         <% } else { %>
