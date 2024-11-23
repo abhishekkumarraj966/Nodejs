@@ -16,7 +16,6 @@ app.get("/youtub", (req, res)=>{
     res.send("<h2> welcome to may block </h2>");
 })
 
-app.listen(process.env.port,()=>{
-    console.log(`server is start on this ${port} port`);
-    
-})
+app.listen(4000, () => {
+    console.log('Server running on port 4000');
+});
