@@ -7,7 +7,7 @@ function App() {
   useEffect(() => {
   const fetchJokes = async () => {
     try {
-      const response = await axios.get("/api/jokes");
+      const response = await axios.get("http://localhost:5000/api/jokes");
       setJokes(response.data);
     } catch (error) {
       console.error("Error fetching jokes:", error);
